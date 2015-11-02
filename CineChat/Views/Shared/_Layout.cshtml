@@ -20,16 +20,37 @@
                 @Html.ActionLink("Cine Chat", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
+                
                 <ul class="nav navbar-nav">
                     <!-- <li>@Html.ActionLink("Home", "Index", "Home")</li> 
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li> -->
                     <li>@Html.ActionLink("Chat","Chat","Chat")</li>
-                    <li>@Html.ActionLink("Category", "Category", "Category")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Adventure</a></li>
+                            <li><a href="#">Comedy</a></li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Horror(+16)</a></li>
+                            <li><a href="#">Animation</a></li>
+                            <li><a href="#">Drama</a></li>
+                            <li><a href="#">Crime(+16)</a></li>
+                            <li><a href="#">Sport</a></li>
+                            <li><a href="#">XXX(+18)</a></li>
+                        </ul>
+                    </li>
                     <li>@Html.ActionLink("TopRated", "TopRated", "TopRated")</li>
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Movies, Directors, Actors">
+                        </div>
+                        <button type="submit" class="btn btn-default">Search</button>
+                    </form>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
+            
         </div>
     </div>
     <div class="container body-content">
