@@ -67,7 +67,7 @@ namespace CineChat.Models
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
-        public string Email { get; set; }
+        public string Email { get; set; }        
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
@@ -79,6 +79,24 @@ namespace CineChat.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        //Pedir para inserir Nome
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 3)]
+        [Display(Name = "Nome")]
+        public string Nome { get; set; }
+
+        //Pedir para inserir Ultimo Nome
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 3)]
+        [Display(Name = "Ultimo Nome")]
+        public string UltimoNome { get; set; }
+
+        //Pedir para inserir Data de Nascimento
+        //[Required]
+        //[DataType(ErrorMessage="Muste insert a date")]
+        //[Display(Name = "Data de Nascimento")]
+        //public string DataDeNascimento { get; set; }
     }
 
     public class ResetPasswordViewModel
