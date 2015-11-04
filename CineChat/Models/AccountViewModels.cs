@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace CineChat.Models
@@ -92,11 +93,13 @@ namespace CineChat.Models
         [Display(Name = "Ultimo Nome")]
         public string UltimoNome { get; set; }
 
-        //Pedir para inserir Data de Nascimento
-        //[Required]
-        //[DataType(ErrorMessage="Muste insert a date")]
-        //[Display(Name = "Data de Nascimento")]
-        //public string DataDeNascimento { get; set; }
+        //Pedir data de nascimento
+        [Required]
+        [DataType(DataType.Date)]
+        [Display(Name = "Data de Nascimento")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime? Birth { get; set; }
+        
     }
 
     public class ResetPasswordViewModel
