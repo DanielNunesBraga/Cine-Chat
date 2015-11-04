@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title
-    <link rel="stylesheet" href="~/Content/font-awesome.css">
+    <title>@ViewBag.Title - CineChat</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.css">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -26,7 +26,7 @@
                     <!-- <li>@Html.ActionLink("Home", "Index", "Home")</li> 
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li> -->
-                    <li>@Html.ActionLink("Chat","Chat","Chat")</li>
+                    <li>@Html.ActionLink("Chat","Chat","Home")</li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -41,7 +41,7 @@
                             <li><a href="#">XXX(+18)</a></li>
                         </ul>
                     </li>
-                    <li>@Html.ActionLink("TopRated", "TopRated", "TopRated")</li>
+                    <li>@Html.ActionLink("TopRated", "TopRated", "Home")</li>
                     <form class="navbar-form navbar-right" role="search">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Movies, Directors, Actors">

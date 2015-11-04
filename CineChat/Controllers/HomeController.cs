@@ -33,5 +33,14 @@ namespace CineChat.Controllers
 
             return View();
         }
+        public ActionResult TopRated()
+        {
+            return View();
+        }
+
+        public ActionResult Chat()
+        {
+            return View();
+        }
     }
 }

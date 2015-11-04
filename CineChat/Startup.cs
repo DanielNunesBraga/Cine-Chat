@@ -2,6 +2,8 @@
 using Owin;
 
 [assembly: OwinStartupAttribute(typeof(CineChat.Startup))]
+[assembly: OwinStartup(typeof(CineChat.Startup))]
+
 namespace CineChat
 {
     public partial class Startup
@@ -9,6 +11,8 @@ namespace CineChat
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+            app.MapSignalR();
         }
     }
+
 }
